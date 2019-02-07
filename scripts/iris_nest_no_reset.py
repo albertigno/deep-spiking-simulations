@@ -44,17 +44,11 @@ def save_confusion_matrix(results, path):
     figure = plot_confusion.get_figure()
     figure.savefig(path+'/confusion_matrix.png')
  
-#dataset_path = '../datasets/mnist'
 dataset_path = '../datasets/iris'
-#dataset_path = '../datasets/tropical_rgb'
 
-# max: 96%
-#layers_path = '../Nest/LeNet_mnist'
-#snn_filepath = layers_path+'/98.96_nest'
-
-# max: 56%
-layers_path = '../Nest/Iris_bias_reg'
-snn_filepath = layers_path+'/iris_bias_constraint_nest'
+# max: 83.3%
+layers_path = '../nest/iris'
+snn_filepath = layers_path+'/Iris_nest'
 
 # simulation variables
 num_to_test = 30
