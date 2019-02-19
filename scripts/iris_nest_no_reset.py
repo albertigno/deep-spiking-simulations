@@ -84,6 +84,7 @@ s = cPickle.load(open(snn_filepath, 'rb'))
 # Iterate over populations in assembly
 layers = []
 for label in s['labels']:
+    structure=s[label]['structure']
     celltype = getattr(sim, s[label]['celltype'])
     population = sim.Population(s[label]['size'], celltype,
                                      celltype.default_parameters,
